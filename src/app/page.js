@@ -96,7 +96,7 @@ export default function HomePage() {
                   <h4 className="text-xl font-semibold mb-3">
                     {product.title}
                   </h4>
-                  <p className="text-gray-600">{product.description}</p>
+                  <p className="text-gray-600 md:max-w-72 text-center mx-auto">{product.description}</p>
                 </div>
               </div>
             </Link>

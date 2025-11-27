@@ -88,7 +88,7 @@ export default function ProductPageTemplate({ product }) {
                 {product.price}
               </p>
               <p className="text-xl font-bold text-white md:text-(--color-primary) mb-8">
-                Marime: {product.size}cm
+                Dimensiuni: {product.size}cm
               </p>
               <p className="text-white md:text-(--color-primary) text-xl leading-relaxed">
                 {product.description}

@@ -2,8 +2,8 @@ export const productData = [
   {
     slug: "container-standard",
     name: "Container Standard",
-    price: "3150€ + TVA",
-    size: "6000X3000X2500",
+    price: "2500€ + TVA",
+    size: "6000X2400X2500",
     description:
       "Echipat cu o ușă și un geam. Construcție solidă, potrivită pentru birouri, spații de lucru sau depozitare.",
     images: {
