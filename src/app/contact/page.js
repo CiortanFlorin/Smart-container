@@ -64,7 +64,7 @@ export default function ContactPage() {
                     Adresă
                   </h3>
                   <p className="text-gray-700 text-lg md:text-2xl leading-relaxed">
-                    Strada Exemplu Nr. 12,
+                    Calea Smardan nr. 2
                     <br />
                     Galați, România
                   </p>
