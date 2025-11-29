@@ -35,7 +35,7 @@ export default function Navbar() {
             </a>
 
             {/* Dropdown menu */}
-            <div className="invisible absolute left-1/2 w-42 -translate-x-1/2 translate-y-[-10px] space-y-2 rounded-lg bg-white px-4 pt-2 text-center opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="invisible absolute left-1/2 w-42 -translate-x-1/2 -translate-y-2.5 space-y-2 rounded-lg bg-white px-4 pt-2 text-center opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
               <a
                 href="/produse/container-standard"
                 className="block py-2 hover:text-(--color-accent)"
@@ -43,10 +43,10 @@ export default function Navbar() {
                 Container Standard
               </a>
               <a
-                href="/produse/container-compact"
+                href="/produse/container-dublu"
                 className="block py-2 hover:text-(--color-accent)"
               >
-                Container Compact
+                Container Dublu
               </a>
               <a
                 href="/produse/container-sanitar"
@@ -114,11 +114,11 @@ export default function Navbar() {
                   Container Standard
                 </a>
                 <a
-                  href="/produse/container-compact"
+                  href="/produse/container-dublu"
                   onClick={() => setMenuOpen(false)}
                   className="hover:text-(--color-accent)"
                 >
-                  Container Compact
+                  Container Dublu
                 </a>
                 <a
                   href="/produse/container-sanitar"

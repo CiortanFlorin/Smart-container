@@ -1,38 +1,69 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import FaqList from "./components/faqList";
 import { faqItems } from "./data/faqData";
 import ContactForm from "./components/contactForm";
+
+export const metadata = {
+  title: "Containere modulare – SmartContainer | Containere locuință, birou, șantier",
+  description:
+    "SmartContainer produce și vinde containere modulare pentru locuințe, birouri, șantiere și spații comerciale. Dimensiuni la cerere, containere unite, termoizolate, cu transport în toată țara.",
+  keywords: [
+    "containere",
+    "containere modulare",
+    "containere de vanzare",
+    "case din containere",
+    "container birou",
+    "container locuinta",
+    "container sanitar",
+    "container modular",
+    "containere România",
+  ],
+  openGraph: {
+    title: "Containere modulare – SmartContainer",
+    description:
+      "Containere modulare pentru orice proiect: locuințe, șantiere, birouri, spații tehnice. Transport în toată țara.",
+    url: "https://smartcontainer.ro",
+    siteName: "SmartContainer",
+    images: [
+      {
+        url: "/foto-container.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Container modular produs de SmartContainer",
+      },
+    ],
+    locale: "ro_RO",
+    type: "website",
+  },
+};
+
+
 export default function HomePage() {
   const products = [
     {
       title: "Container Standard",
       link: "/produse/container-standard",
-      size: "6000X3000X2500",
+      size: "6m X 2,4m X 2,5m",
       foto: "/products/landscape/standard-1.jpg",
       description:
         "Echipat cu o ușă și un geam. Construcție solidă, potrivită pentru birouri, spații de lucru sau depozitare.",
-      price: "3150€ + TVA",
     },
     {
-      title: "Container Compact",
-      link: "/produse/container-compact",
-      size: "2400X2400X2500",
-      foto: "/products/landscape/compact-1.jpg",
+      title: "Container Dublu",
+      link: "/produse/container-dublu",
+      size: "6m X 4,8m X 2,5m",
+      foto: "/products/landscape/dublu-1.jpg",
       description:
-        "Include o ușă și un geam mic de 500X500. Ideal pentru spații restrânse și utilizări multiple.",
-      price: "1400€ + TVA",
+        "Container modular dublu, termoizolat, cu zonă principală spațioasă și grup sanitar complet echipat.",
     },
     {
       title: "Container Sanitar",
       link: "/produse/container-sanitar",
-      size: "2400X2400X2500",
+      size: "2,4m X 2,4m X 2,5m",
       foto: "/products/landscape/sanitar-2.jpg",
       description:
         "Dotat cu WC, chiuvetă, o ușă și un geam mic. Perfect pentru șantiere sau zone fără utilități.",
-      price: "1600€ + TVA",
     },
   ];
   return (
@@ -63,7 +94,7 @@ export default function HomePage() {
             <div className="relative w-[500px] lg:w-[650px] xl:w-[800px] h-auto">
               <Image
                 src="/foto-container.jpg"
-                alt="Container modular"
+                alt="Container modular modern produs de SmartContainer"
                 width={1200}
                 height={800}
                 className="rounded-2xl object-cover shadow-2xl"
@@ -86,7 +117,7 @@ export default function HomePage() {
                 <div className="relative aspect-video w-full">
                   <Image
                     src={product.foto}
-                    alt="Container modular"
+                    alt={`Imagine ${product.title} – ${product.description}`}
                     fill
                     className="object-cover rounded-t-xl"
                     priority
@@ -96,7 +127,9 @@ export default function HomePage() {
                   <h4 className="text-xl font-semibold mb-3">
                     {product.title}
                   </h4>
-                  <p className="text-gray-600 md:max-w-72 text-center mx-auto">{product.description}</p>
+                  <p className="text-gray-600 md:max-w-72 text-center mx-auto">
+                    {product.description}
+                  </p>
                 </div>
               </div>
             </Link>

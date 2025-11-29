@@ -1,6 +1,34 @@
-"use client";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import ContactForm from "../components/contactForm";
+
+export const metadata = {
+  title: "Contact – Containere Modulare la Comandă",
+  description:
+    "Contactează-ne pentru oferte, informații și comenzi de containere modulare. Răspundem rapid și oferim consultanță gratuită pentru orice tip de proiect.",
+  keywords: [
+    "contact containere",
+    "containere modulare contact",
+    "ofertă containere",
+    "containere la comandă",
+    "contact producător containere",
+    "preț containere modulare",
+  ],
+  openGraph: {
+    title: "Contact – Containere Modulare la Comandă",
+    description:
+      "Ai nevoie de un container modular? Contactează-ne pentru oferte și consultanță gratuită.",
+    images: [
+      {
+        url: "/foto-container.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Container modular",
+      },
+    ],
+    type: "website",
+  },
+};
+
 
 export default function ContactPage() {
   return (

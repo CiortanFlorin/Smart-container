@@ -21,7 +21,7 @@ font-weight: 600;
 
 
 button {
-@apply bg-[var(--color-accent)] text-white font-semibold px-4 py-2 rounded-lg transition-colors;
+@apply bg-(--color-accent) text-white font-semibold px-4 py-2 rounded-lg transition-colors;
 }
 
 
