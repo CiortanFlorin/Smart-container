@@ -98,7 +98,7 @@ export const productData = [
           alt: "Container sanitar complet echipat cu WC și chiuvetă"
         },
         {
-          src: "/products/landscape/sanitar-2.JPG",
+          src: "/products/landscape/sanitar-2.jpg",
           alt: "Vedere exterior container sanitar pentru șantier"
         },
         {
