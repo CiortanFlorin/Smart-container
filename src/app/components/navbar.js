@@ -6,7 +6,8 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownProduseOpen, setDropdownProduseOpen] = useState(false);
+  const [dropdownArticoleOpen, setDropdownArticoleOpen] = useState(false);
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -63,9 +64,51 @@ export default function Navbar() {
           <a href="/galerie" className="hover:text-(--color-accent)">
             Galerie
           </a>
-          <a href="#articole" className="hover:text-(--color-accent)">
-            Articole
-          </a>
+          <div className="group relative">
+            <a className="flex items-center gap-1 hover:text-(--color-accent)">
+              Articole
+            </a>
+
+            {/* Dropdown menu */}
+            <div className="invisible absolute left-1/2 w-86 -translate-x-1/2 -translate-y-2.5 space-y-2 rounded-lg bg-white px-4 pt-2 text-center opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              <a
+                href="/articole/avantaje-preturi"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Avantaje, Prețuri și Modele Populare în România
+              </a>
+              <a
+                href="/articole/container-potrivit"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Cum Alegi Containerul Potrivit?
+              </a>
+              <a
+                href="/articole/container-vs-traditional"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Container vs. Construcție Tradițională
+              </a>
+              <a
+                href="/articole/containere-birouri"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Containere Pentru Birouri
+              </a>
+              <a
+                href="/articole/containere-santier"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Containere pentru Șantiere
+              </a>
+              <a
+                href="/articole/modularitatea-containerelor"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Cum se Pot Uni Orizontal și Vertical
+              </a>
+            </div>
+          </div>
         </nav>
 
         {/* Mobile toggle */}
@@ -97,14 +140,14 @@ export default function Navbar() {
           {/* MOBILE DROPDOWN */}
           <div className="flex flex-col">
             <a
-              onClick={() => setDropdownOpen(!dropdownOpen)}
+              onClick={() => setDropdownProduseOpen(!dropdownProduseOpen)}
               className="flex items-center justify-between w-40"
             >
               Produse
             </a>
 
             {/* mobile dropdown items */}
-            {dropdownOpen && (
+            {dropdownProduseOpen && (
               <div className="ml-4 mt-2 flex flex-col gap-3 ">
                 <a
                   href="/produse/container-standard"
@@ -137,9 +180,62 @@ export default function Navbar() {
           <a href="/galerie" onClick={() => setMenuOpen(false)}>
             Galerie
           </a>
-          <a href="#articole" onClick={() => setMenuOpen(false)}>
-            Articole
-          </a>
+          <div className="flex flex-col">
+            <a
+              onClick={() => setDropdownArticoleOpen(!dropdownArticoleOpen)}
+              className="flex items-center justify-between w-40"
+            >
+              Articole
+            </a>
+
+            {/* mobile dropdown items */}
+            {dropdownArticoleOpen && (
+              <div className="ml-4 mt-2 flex flex-col gap-3 ">
+                <a
+                  href="/articole/avantaje-preturi"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                  Avantaje, Prețuri și Modele Populare în România
+                </a>
+                <a
+                  href="/articole/container-potrivit"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                  Cum Alegi Containerul Potrivit?
+                </a>
+                <a
+                  href="/articole/container-vs-traditional"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                  Container vs. Construcție Tradițională
+                </a>
+                <a
+                  href="/articole/containere-birouri"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                  Containere Pentru Birouri
+                </a>
+                <a
+                  href="/articole/containere-santier"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                  Containere pentru Șantiere
+                </a>
+                <a
+                  href="/articole/modularitatea-containerelor"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                  Cum se Pot Uni Orizontal și Vertical
+                </a>
+              </div>
+            )}
+          </div>
         </nav>
       </div>
     </div>

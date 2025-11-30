@@ -59,8 +59,8 @@ export default function ContactPage() {
                     Telefon
                   </h3>
                   <p className="text-gray-700 text-lg md:text-2xl leading-relaxed">
-                    <a href="tel:+40xxxxxxxxx" className="hover:underline">
-                      +40 751 518 506
+                    <a href="tel:+407518502" className="hover:underline">
+                      +40 751 518 502
                     </a>
                   </p>
                 </div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-gray-700 text-lg md:text-2xl">
                     <a
-                      href="mailto:contact@smartcontainer.ro"
+                      href="mailto:viorelciortan2@gmail.com"
                       className="hover:underline"
                     >
                       viorelciortan2@gmail.com
