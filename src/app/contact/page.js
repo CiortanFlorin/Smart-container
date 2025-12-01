@@ -19,7 +19,7 @@ export const metadata = {
       "Ai nevoie de un container modular? Contactează-ne pentru oferte și consultanță gratuită.",
     images: [
       {
-        url: "/foto-container.jpg",
+        url: "/foto-container.webp",
         width: 1200,
         height: 630,
         alt: "Container modular",

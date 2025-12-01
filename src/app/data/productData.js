@@ -11,29 +11,29 @@ export const productData = [
     images: {
       landscape: [
         {
-          src: "/products/landscape/standard-1.jpg",
+          src: "/products/landscape/standard-1.webp",
           alt: "Container standard de 6m vedere exterioară — SmartContainer"
         },
         {
-          src: "/products/landscape/standard-2.jpg",
+          src: "/products/landscape/standard-2.webp",
           alt: "Container modular standard 6m prezentare laterală"
         },
         {
-          src: "/products/landscape/standard-3.jpg",
+          src: "/products/landscape/standard-3.webp",
           alt: "Container standard pentru birou sau depozitare — imagine exterior"
         }
       ],
       portrait: [
         {
-          src: "/products/portrait/standard-1.jpg",
+          src: "/products/portrait/standard-1.webp",
           alt: "Imagine portret a unui container standard modular de 6 metri"
         },
         {
-          src: "/products/portrait/standard-2.jpg",
+          src: "/products/portrait/standard-2.webp",
           alt: "Container standard — detaliu ușă și geam termopan"
         },
         {
-          src: "/products/portrait/standard-3.jpg",
+          src: "/products/portrait/standard-3.webp",
           alt: "Container modular standard — vedere frontală"
         }
       ]
@@ -52,29 +52,29 @@ export const productData = [
   images: {
     landscape: [
       {
-        src: "/products/landscape/dublu-1.jpg",
+        src: "/products/landscape/dublu-1.webp",
         alt: "Container modular dublu 6x4.8m — vedere exterior"
       },
       {
-        src: "/products/landscape/dublu-2.jpg",
+        src: "/products/landscape/dublu-2.webp",
         alt: "Container dublu cu grup sanitar — prezentare laterală"
       },
       {
-        src: "/products/landscape/dublu-3.jpg",
+        src: "/products/landscape/dublu-3.webp",
         alt: "Container dublu modular termoizolat — imagine frontală"
       }
     ],
     portrait: [
       {
-        src: "/products/portrait/dublu-1.jpg",
+        src: "/products/portrait/dublu-1.webp",
         alt: "Imagine portret container modular dublu"
       },
       {
-        src: "/products/portrait/dublu-2.jpg",
+        src: "/products/portrait/dublu-2.webp",
         alt: "Container dublu — detaliu ușă și geamuri"
       },
       {
-        src: "/products/portrait/dublu-3.jpg",
+        src: "/products/portrait/dublu-3.webp",
         alt: "Container modular dublu cu grup sanitar — vedere portret"
       }
     ]
@@ -94,29 +94,29 @@ export const productData = [
     images: {
       landscape: [
         {
-          src: "/products/landscape/sanitar-1.jpg",
+          src: "/products/landscape/sanitar-1.webp",
           alt: "Container sanitar complet echipat cu WC și chiuvetă"
         },
         {
-          src: "/products/landscape/sanitar-2.jpg",
+          src: "/products/landscape/sanitar-2.webp",
           alt: "Vedere exterior container sanitar pentru șantier"
         },
         {
-          src: "/products/landscape/sanitar-3.jpg",
+          src: "/products/landscape/sanitar-3.webp",
           alt: "Container sanitar modular — imagine laterală"
         }
       ],
       portrait: [
         {
-          src: "/products/portrait/sanitar-1.jpg",
+          src: "/products/portrait/sanitar-1.webp",
           alt: "Container sanitar — vedere portret exterior"
         },
         {
-          src: "/products/portrait/sanitar-2.jpg",
+          src: "/products/portrait/sanitar-2.webp",
           alt: "Interior container sanitar cu WC și chiuvetă"
         },
         {
-          src: "/products/portrait/sanitar-3.jpg",
+          src: "/products/portrait/sanitar-3.webp",
           alt: "Container sanitar modular — detalii"
         }
       ]

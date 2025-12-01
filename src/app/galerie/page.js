@@ -22,7 +22,7 @@ export const metadata = {
       "Explorează galeria noastră cu containere modulare: modele standard, duble, sanitare și configurații speciale.",
     images: [
       {
-        url: "/products/landscape/standard-1.jpg",
+        url: "/products/landscape/standard-1.webp",
         width: 1200,
         height: 630,
         alt: "Galerie containere modulare",

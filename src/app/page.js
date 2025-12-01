@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "SmartContainer",
     images: [
       {
-        url: "/foto-container.jpg",
+        url: "/foto-container.webp",
         width: 1200,
         height: 800,
         alt: "Container modular produs de SmartContainer",
@@ -45,7 +45,7 @@ export default function HomePage() {
       title: "Container Standard",
       link: "/produse/container-standard",
       size: "6m X 2,4m X 2,5m",
-      foto: "/products/landscape/standard-1.jpg",
+      foto: "/products/landscape/standard-1.webp",
       description:
         "Echipat cu o ușă și un geam. Construcție solidă, potrivită pentru birouri, spații de lucru sau depozitare.",
     },
@@ -53,7 +53,7 @@ export default function HomePage() {
       title: "Container Dublu",
       link: "/produse/container-dublu",
       size: "6m X 4,8m X 2,5m",
-      foto: "/products/landscape/dublu-1.jpg",
+      foto: "/products/landscape/dublu-1.webp",
       description:
         "Container modular dublu, termoizolat, cu zonă principală spațioasă și grup sanitar complet echipat.",
     },
@@ -61,7 +61,7 @@ export default function HomePage() {
       title: "Container Sanitar",
       link: "/produse/container-sanitar",
       size: "2,4m X 2,4m X 2,5m",
-      foto: "/products/landscape/sanitar-2.jpg",
+      foto: "/products/landscape/sanitar-2.webp",
       description:
         "Dotat cu WC, chiuvetă, o ușă și un geam mic. Perfect pentru șantiere sau zone fără utilități.",
     },
@@ -93,7 +93,7 @@ export default function HomePage() {
           <div className="hidden md:block md:ml-12 shrink-0">
             <div className="relative w-[500px] lg:w-[650px] xl:w-[800px] h-auto">
               <Image
-                src="/foto-container.jpg"
+                src="/foto-container.webp"
                 alt="Container modular modern produs de SmartContainer"
                 width={1200}
                 height={800}

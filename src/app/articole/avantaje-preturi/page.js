@@ -17,7 +17,7 @@ export const metadata = {
     type: "article",
     url: "https://smartcontainer.ro/articole/case-din-containere",
     images: [
-      "/og/case-din-containere.jpg"
+      "/og/case-din-containere.webp"
     ]
   }
 };
