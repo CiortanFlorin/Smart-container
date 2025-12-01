@@ -39,9 +39,9 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-6 text-(--color-primary) font-medium relative">
           {/* DESKTOP DROPDOWN: PRODUSE */}
           <div className="group relative">
-            <a className="flex items-center gap-1 hover:text-(--color-accent)">
+            <p className="flex items-center gap-1 hover:text-(--color-accent)">
               Produse
-            </a>
+            </p>
 
             {/* Dropdown menu */}
             <div className="invisible absolute left-1/2 w-42 -translate-x-1/2 -translate-y-2.5 space-y-2 rounded-lg bg-white px-4 pt-2 text-center opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
@@ -73,9 +73,9 @@ export default function Navbar() {
             Galerie
           </a>
           <div className="group relative">
-            <a className="flex items-center gap-1 hover:text-(--color-accent)">
+            <p className="flex items-center gap-1 hover:text-(--color-accent)">
               Articole
-            </a>
+            </p>
 
             {/* Dropdown menu */}
             <div className="invisible absolute left-1/2 w-86 -translate-x-1/2 -translate-y-2.5 space-y-2 rounded-lg bg-white px-4 pt-2 text-center opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
@@ -120,7 +120,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile toggle */}
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden" title="mobile-toogle" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

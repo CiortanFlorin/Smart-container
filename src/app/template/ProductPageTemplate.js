@@ -21,6 +21,7 @@ export default function ProductPageTemplate({ product }) {
                 src={selectedImage.portrait.src}
                 alt={selectedImage.portrait.alt}
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>
@@ -61,6 +62,7 @@ export default function ProductPageTemplate({ product }) {
                     src={product.images.portrait[index].src}
                     alt={product.images.portrait[index].alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>

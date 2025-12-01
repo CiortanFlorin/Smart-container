@@ -12,14 +12,18 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return {
+  const firstImage = product.images?.[0];
+
+   return {
     title: `${product.name} – Container modular ${product.size} | SmartContainer`,
-    description: `${product.name} (${product.size}) – container modular complet echipat. Transport în toată țara. Află detalii tehnice, prețuri și vezi galeria foto.`,
-    openGraph: {
-      title: `${product.name} – Container modular ${product.size} | SmartContainer`,
-      description: `${product.longDescription} – container modular complet echipat.`,
-      images: product.images ? [product.images[0]] : [],
-    }
+    description: `${product.name} (${product.size}) – container modular complet echipat.`,
+    openGraph: firstImage
+      ? {
+          title: `${product.name} – Container modular ${product.size} | SmartContainer`,
+          description: `${product.longDescription}`,
+          images: [{ url: firstImage }],
+        }
+      : undefined,
   };
 }
 

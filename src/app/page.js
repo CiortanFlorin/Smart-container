@@ -28,8 +28,8 @@ export const metadata = {
     images: [
       {
         url: "/foto-container.webp",
-        width: 1200,
-        height: 800,
+        width: 600,
+        height: 400,
         alt: "Container modular produs de SmartContainer",
       },
     ],

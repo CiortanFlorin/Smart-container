@@ -39,8 +39,8 @@ export default function GalerieClient({ images }) {
               <Image
                 src={img}
                 alt="Container"
-                width={800}
-                height={800}
+                width={400}
+                height={400}
                 className={`rounded-xl object-cover w-full mb-4
                   ${!isMobile ? "transition-transform duration-300 group-hover:scale-105" : ""}
                 `}
@@ -60,8 +60,8 @@ export default function GalerieClient({ images }) {
             <Image
               src={selected}
               alt="Preview"
-              width={1600}
-              height={1200}
+              width={800}
+              height={600}
               className="rounded-xl object-contain mx-auto"
             />
           </div>
