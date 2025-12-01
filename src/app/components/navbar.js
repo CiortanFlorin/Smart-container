@@ -120,7 +120,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile toggle */}
-        <button className="md:hidden" title="mobile-toogle" onClick={() => setMenuOpen(!menuOpen)}>
+        <button id="mobile-toogle" className="md:hidden" title="mobile-toogle" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -147,12 +147,12 @@ export default function Navbar() {
         <nav className="flex flex-col gap-6 text-lg">
           {/* MOBILE DROPDOWN */}
           <div className="flex flex-col">
-            <a
+            <p
               onClick={() => setDropdownProduseOpen(!dropdownProduseOpen)}
               className="flex items-center justify-between w-40"
             >
               Produse
-            </a>
+            </p>
 
             {/* mobile dropdown items */}
             {dropdownProduseOpen && (
@@ -189,12 +189,12 @@ export default function Navbar() {
             Galerie
           </a>
           <div className="flex flex-col">
-            <a
+            <p
               onClick={() => setDropdownArticoleOpen(!dropdownArticoleOpen)}
               className="flex items-center justify-between w-40"
             >
               Articole
-            </a>
+            </p>
 
             {/* mobile dropdown items */}
             {dropdownArticoleOpen && (
