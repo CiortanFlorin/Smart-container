@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://www.smartcontainer.ro/</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://smartcontainer.ro/produse/container-standard</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/produse/container-dublu</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/produse/container-sanitar</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://smartcontainer.ro/articole/avantaje-preturi</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/articole/container-potrivit</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/articole/container-vs-traditional</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/articole/containere-birouri</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/articole/containere-santier</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/articole/modularitatea-containerelor</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.smartcontainer.ro/galerie</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.smartcontainer.ro/contact</loc>
+        <lastmod>2025-01-12T10:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>

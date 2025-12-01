@@ -42,6 +42,17 @@ export const faqItems = [
   question: "Cum se face plata?",
   answer:
     "Pentru confirmarea comenzii trebuie achitat mai întâi un avans de 30–50% (mai mic în funcție de numărul de containere comandate). Restul sumei se achită la livrare sau la ridicarea containerului."
+},
+{
+  question: "În cât timp livrați containerele?",
+  answer:
+    "Livrarea se face rapid, în aproximativ 7 zile lucrătoare de la confirmarea comenzii și achitarea avansului. Timpul poate varia în funcție de complexitatea proiectului și disponibilitatea în stoc."
+},
+{
+  question: "Sunteți acreditați pentru achiziții publice?",
+  answer:
+    "Da, suntem acreditați SAEP și înregistrați în platforma SICAP, astfel încât putem furniza containere pentru instituții publice, proiecte guvernamentale și orice tip de achiziții ale statului român."
 }
+
 
 ];

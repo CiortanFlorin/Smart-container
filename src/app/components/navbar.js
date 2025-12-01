@@ -140,7 +140,7 @@ export default function Navbar() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="mb-8" onClick={() => setMenuOpen(false)}>
+        <button id="closing-menu" className="mb-8" title="closing-menu" onClick={() => setMenuOpen(false)}>
           <X size={28} />
         </button>
 
