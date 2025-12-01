@@ -13,6 +13,9 @@ const poppins = Poppins({
 export const metadata = {
   title: "SmartContainer",
   description: "Containere modulare pentru locuit, birou și construcții",
+  verification: {
+    google: 'NwyrlOkVjCCchUDyGmCNyhlf6qmz1IV-m5o4ni314t4',
+  },
 };
 
 export default function RootLayout({ children }) {
