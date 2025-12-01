@@ -1,13 +1,21 @@
 "use client";
 
 import { Menu, X} from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownProduseOpen, setDropdownProduseOpen] = useState(false);
   const [dropdownArticoleOpen, setDropdownArticoleOpen] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [menuOpen]);
 
   return (
     <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -127,7 +135,7 @@ export default function Navbar() {
 
       {/* MOBILE SIDEBAR */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-(--color-primary) text-white p-6 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 top-0 left-0 overflow-y-auto h-full w-64 bg-(--color-primary) text-white p-6 z-50 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -233,6 +241,7 @@ export default function Navbar() {
                 >
                   Cum se Pot Uni Orizontal și Vertical
                 </a>
+                
               </div>
             )}
           </div>
