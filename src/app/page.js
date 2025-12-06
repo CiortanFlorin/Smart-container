@@ -5,7 +5,7 @@ import { faqItems } from "./data/faqData";
 import ContactForm from "./components/contactForm";
 
 export const metadata = {
-  title: "Containere modulare – SmartContainer | Containere locuință, birou, șantier",
+  title: "Containere modulare – SmartContainer | Containere locuință, birou, șantier de vanzare",
   description:
     "SmartContainer produce și vinde containere modulare pentru locuințe, birouri, șantiere și spații comerciale. Dimensiuni la cerere, containere unite, termoizolate, cu transport în toată țara.",
   keywords: [

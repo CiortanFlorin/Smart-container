@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 export const metadata = {
   title: "Containere pentru Șantiere: Ce Tipuri Există și Cum Îți Optimizează Munca",
   description:

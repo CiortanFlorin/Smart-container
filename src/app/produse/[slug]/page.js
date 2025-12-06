@@ -15,11 +15,22 @@ export async function generateMetadata({ params }) {
   const firstImage = product.images?.[0];
 
    return {
-    title: `${product.name} – Container modular ${product.size} | SmartContainer`,
-    description: `${product.name} (${product.size}) – container modular complet echipat.`,
+    title: `${product.name} – Container modular de vanzare | SmartContainer`,
+    description: `${product.name} (${product.size}) – container modular complet echipat de vanzare.`,
+    keywords: [
+    "containere",
+    "containere modulare",
+    "containere de vanzare",
+    "case din containere",
+    "container birou",
+    "container locuinta",
+    "container sanitar",
+    "container modular",
+    "containere România",
+  ],
     openGraph: firstImage
       ? {
-          title: `${product.name} – Container modular ${product.size} | SmartContainer`,
+          title: `${product.name} – Container modular de vanzare | SmartContainer`,
           description: `${product.longDescription}`,
           images: [{ url: firstImage }],
         }

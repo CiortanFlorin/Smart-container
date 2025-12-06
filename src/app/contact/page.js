@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import ContactForm from "../components/contactForm";
 
 export const metadata = {
-  title: "Contact – Containere Modulare la Comandă",
+  title: "Contact – Containere Modulare de vanzare",
   description:
     "Contactează-ne pentru oferte, informații și comenzi de containere modulare. Răspundem rapid și oferim consultanță gratuită pentru orice tip de proiect.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata = {
     "preț containere modulare",
   ],
   openGraph: {
-    title: "Contact – Containere Modulare la Comandă",
+    title: "Contact – Containere Modulare de vanzare",
     description:
       "Ai nevoie de un container modular? Contactează-ne pentru oferte și consultanță gratuită.",
     images: [
