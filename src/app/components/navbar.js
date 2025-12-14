@@ -80,6 +80,12 @@ export default function Navbar() {
             {/* Dropdown menu */}
             <div className="invisible absolute left-1/2 w-86 -translate-x-1/2 -translate-y-2.5 space-y-2 rounded-lg bg-white px-4 pt-2 text-center opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
               <a
+                href="/articole/ghid-complet"
+                className="block py-2 hover:text-(--color-accent)"
+              >
+                Ghid Complet pentru Alegerea Containerelor Modulare
+              </a>
+              <a
                 href="/articole/avantaje-preturi"
                 className="block py-2 hover:text-(--color-accent)"
               >
@@ -199,6 +205,13 @@ export default function Navbar() {
             {/* mobile dropdown items */}
             {dropdownArticoleOpen && (
               <div className="ml-4 mt-2 flex flex-col gap-3 ">
+                <a
+                  href="/articole/ghid-complet"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-(--color-accent)"
+                >
+                 Ghid pentru Alegerea Containerelor Modulare
+                </a>
                 <a
                   href="/articole/avantaje-preturi"
                   onClick={() => setMenuOpen(false)}

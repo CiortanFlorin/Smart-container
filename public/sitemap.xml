@@ -70,6 +70,13 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <url>
+        <loc>https://smartcontainer.ro/articole/ghid-complet</loc>
+        <lastmod>2025-14-12T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     <url>
         <loc>https://www.smartcontainer.ro/galerie</loc>
