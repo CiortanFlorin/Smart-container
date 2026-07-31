@@ -21,17 +21,17 @@ export default function Navbar() {
     <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
-        <a href="/">
+        <a href="/" aria-label="SmartContainer - acasă">
           <div className="flex items-center gap-1">
             <Image
               src="/logo_transparent.png"
-              alt="Container logo"
+              alt="Sigla SmartContainer"
               width={50}
               height={50}
             />
-            <h1 className="text-2xl font-bold text-(--color-primary)">
+            <span className="text-2xl font-bold text-(--color-primary)">
               SmartContainer
-            </h1>
+            </span>
           </div>
         </a>
 

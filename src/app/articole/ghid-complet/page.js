@@ -1,3 +1,5 @@
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title:
     "Ghid Complet despre Containere: Locuire, Birouri, Șantiere și Depozitare | SmartContainer",
@@ -13,20 +15,32 @@ export const metadata = {
     "containere depozitare",
     "case din containere",
   ],
+  alternates: {
+    canonical: "/articole/ghid-complet",
+  },
   openGraph: {
     title:
       "Ghid Complet despre Containere: Locuire, Birouri, Șantiere și Depozitare",
     description:
       "Tot ce trebuie să știi despre containere modulare: utilizări, avantaje, prețuri și configurații disponibile în România.",
     type: "article",
-    url: "https://smartcontainer.ro/articole/ghid-complet-containere",
+    url: "/articole/ghid-complet",
     images: ["/og/ghid-containere.webp"],
   },
 };
 
 export default function GhidCompletContainerePage() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Ghid Complet despre Containere", url: "/articole/ghid-complet" },
+  ]);
+
   return (
     <main className="pt-32 pb-20 px-4 max-w-4xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
         Ghid Complet despre Containere: Locuire, Birouri, Șantiere și Depozitare
       </h1>

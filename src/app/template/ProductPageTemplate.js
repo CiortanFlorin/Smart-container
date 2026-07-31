@@ -86,6 +86,11 @@ export default function ProductPageTemplate({ product }) {
               <h1 className="text-4xl font-bold text-white md:text-(--color-primary) mb-6">
                 {product.name}
               </h1>
+              {product.tagline && (
+                <p className="text-white md:text-(--color-primary) text-xl mb-6">
+                  {product.tagline}
+                </p>
+              )}
               <h2 className="text-3xl font-bold text-(--color-accent) mb-8">
                 Pret: {product.price}
               </h2>

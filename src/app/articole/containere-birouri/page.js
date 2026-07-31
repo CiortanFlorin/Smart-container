@@ -1,75 +1,123 @@
+import Link from "next/link";
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title:
-    "Containere Modulare: Soluția Rapidă și Eficientă pentru Spații Locuibile sau Birouri",
+    "Containere pentru Birouri: Soluții Modulare Rapide pentru Companii | SmartContainer",
   description:
-    "Află de ce containerele modulare reprezintă cea mai rapidă, flexibilă și eficientă soluție pentru birouri, locuințe sau spații comerciale. Avantaje, utilizări și configurări disponibile.",
+    "Container birou de vânzare: soluții modulare rapide pentru companii, șantiere sau spații administrative temporare. Configurații, dotări și prețuri orientative.",
+  keywords: [
+    "containere birou",
+    "container birou de vanzare",
+    "birouri modulare",
+    "container birou santier",
+    "containere modulare Romania",
+  ],
+  alternates: {
+    canonical: "/articole/containere-birouri",
+  },
   openGraph: {
-    title: "Containere Modulare: Soluția Rapidă și Eficientă",
+    title: "Containere pentru Birouri: Soluții Modulare Rapide pentru Companii",
     description:
-      "Ghid complet despre beneficiile containerelor modulare și cum pot fi configurate pentru proiectele tale.",
-    url: "https://smartcontainer.ro/articole/containere-modulare",
+      "Container birou modular de vânzare: configurații, dotări, cost comparativ cu un birou clasic și opțiuni de extindere.",
+    url: "/articole/containere-birouri",
     type: "article",
   },
 };
 
-export default function ContainereModularePage() {
+export default function ContainereBirouriPage() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Containere pentru Birouri", url: "/articole/containere-birouri" },
+  ]);
+
   return (
-    <main className="pt-32 pb-20 max-w-4xl mx-auto px-4 md:h-screen">
+    <main className="pt-32 pb-20 max-w-4xl mx-auto px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
-        Containere Modulare: Soluția Rapidă și Eficientă pentru Spații Locuibile
-        sau Birouri
+        Containere pentru Birouri: Soluții Modulare Rapide și Eficiente pentru Companii
       </h1>
 
       <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-        Containerele modulare au devenit în ultimii ani una dintre cele mai
-        populare soluții pentru spații locuibile, birouri temporare sau chiar
-        construcții permanente. Avantajele lor — timpul rapid de producție,
-        flexibilitatea ridicată și costul accesibil — le fac o alegere ideală
-        pentru persoane fizice și companii care au nevoie de o soluție practică
-        și eficientă.
+        Un container birou este soluția rapidă pentru companiile care au nevoie
+        de spațiu administrativ suplimentar, un punct de lucru temporar sau un
+        birou de șantier — fără termenii lungi și costurile unei construcții
+        clasice. Un container modular de birou poate fi livrat, echipat și pus
+        în funcțiune în câteva zile, spre deosebire de lunile necesare unei
+        clădiri tradiționale.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-(--color-primary)">
-        De ce să alegi un container modular?
+        Birou single sau open-space — două opțiuni de configurare
       </h2>
       <p className="text-gray-700 mb-6 leading-relaxed">
-        Unul dintre cele mai mari avantaje ale containerelor modulare este
-        rapiditatea cu care pot fi produse și livrate. Spre deosebire de
-        construcțiile clasice, care necesită luni de zile, un container modular
-        poate fi gata în câteva zile sau săptămâni. În plus, acestea sunt
-        complet personalizabile: dimensiuni, izolație, compartimentări,
-        instalații electrice și sanitare — totul poate fi adaptat exact nevoilor
-        tale.
+        Pentru un birou individual, o cabină de pază sau un spațiu administrativ
+        compact,{" "}
+        <Link href="/produse/container-standard" className="text-(--color-accent) underline">
+          Containerul Standard
+        </Link>{" "}
+        (6m x 2,4m) oferă suficient spațiu pentru birou, dulapuri și zonă de
+        primire. Când echipa are nevoie de mai mult spațiu — sală de ședințe,
+        birou open-space pentru mai mulți angajați sau birou cu grup sanitar
+        propriu —{" "}
+        <Link href="/produse/container-dublu" className="text-(--color-accent) underline">
+          Containerul Dublu
+        </Link>{" "}
+        (6m x 4,8m) oferă aproape dublul suprafeței, cu opțiunea unui grup
+        sanitar complet echipat inclus.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-(--color-primary)">
-        Utilizări frecvente ale containerelor modulare
+        Dotări disponibile pentru un container birou
       </h2>
       <p className="text-gray-700 mb-6 leading-relaxed">
-        Containerele modulare sunt folosite într-o varietate de proiecte:
-        birouri de șantier, spații comerciale, locuințe temporare sau
-        permanente, puncte de vânzare, depozite, cabine de pază sau grupuri
-        sanitare. Modularitatea lor permite combinarea orizontală sau verticală,
-        rezultând spații mari, bine organizate și complet funcționale.
+        Un container birou modular poate fi echipat integral pentru lucru zilnic:
+        instalație electrică cu tablou de siguranțe, prize și iluminat LED, aer
+        condiționat, izolație termică din panouri sandwich, mobilier de birou,
+        geamuri termopan pentru lumină naturală și, la nevoie, un grup sanitar
+        propriu. Toate dotările pot fi personalizate în funcție de numărul de
+        angajați și de destinația exactă a spațiului.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-(--color-primary)">
-        Flexibilitate maximă și costuri reduse
+        Container birou de șantier
       </h2>
       <p className="text-gray-700 mb-6 leading-relaxed">
-        În comparație cu construcțiile convenționale, containerele modulare
-        oferă un raport excelent calitate-preț. Costurile sunt semnificativ mai
-        mici, iar întreținerea este minimă. În plus, acestea pot fi mutate cu
-        ușurință, ceea ce le face ideale pentru proiecte temporare sau pentru
-        cei care doresc flexibilitate maximă.
+        Pe șantiere, containerul birou este de obicei primul element instalat —
+        aici se coordonează echipele, se țin ședințele și se gestionează
+        documentația proiectului. Poate fi amplasat lângă un{" "}
+        <Link href="/produse/container-sanitar" className="text-(--color-accent) underline">
+          container sanitar
+        </Link>{" "}
+        pentru a forma un punct administrativ complet echipat. Poți vedea mai
+        multe despre acest tip de configurare în articolul despre{" "}
+        <Link href="/articole/containere-santier" className="text-(--color-accent) underline">
+          containere pentru șantiere
+        </Link>
+        .
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-(--color-primary)">
+        Cost comparativ cu un birou tradițional
+      </h2>
+      <p className="text-gray-700 mb-6 leading-relaxed">
+        Închirierea sau construirea unui spațiu de birou clasic implică timpi
+        lungi de execuție și costuri greu de anticipat. Un container birou
+        modular, în schimb, are un preț fix, cunoscut de la început, iar
+        instalarea durează câteva zile — un avantaj important pentru companiile
+        care au nevoie rapid de spațiu operațional sau care preferă o investiție
+        ce poate fi ulterior relocată sau extinsă prin unirea mai multor module.
       </p>
 
       <p className="text-gray-700 mt-10 leading-relaxed font-medium">
-        Dacă ai nevoie de un container modular configurat exact după cerințele
-        tale,{" "}
-        <a href="/contact" className="text-(--color-accent) underline">
-          contactează-ne
-        </a>
+        Ai nevoie de un container birou configurat exact după cerințele
+        companiei tale?{" "}
+        <Link href="/contact" className="text-(--color-accent) underline">
+          Contactează-ne
+        </Link>{" "}
         — îți oferim producție rapidă, consultanță și opțiuni variate de
         personalizare.
       </p>

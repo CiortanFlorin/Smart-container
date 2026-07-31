@@ -13,10 +13,14 @@ export const metadata = {
     "contact producător containere",
     "preț containere modulare",
   ],
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact – Containere Modulare de vanzare",
     description:
       "Ai nevoie de un container modular? Contactează-ne pentru oferte și consultanță gratuită.",
+    url: "/contact",
     images: [
       {
         url: "/foto-container.webp",

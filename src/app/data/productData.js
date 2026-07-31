@@ -4,6 +4,15 @@ export const productData = [
     name: "Container Standard",
     price: "2500€ + TVA",
     size: "6m X 2,4m X 2,5m",
+    tagline: "Container modular de vânzare pentru birou, depozitare sau șantier.",
+    keywords: [
+      "container standard",
+      "container de vanzare",
+      "container modular",
+      "container birou",
+      "container santier",
+      "containere modulare Romania",
+    ],
     description:
       "Echipat cu o ușă și un geam. Construcție solidă, potrivită pentru birouri, spații de lucru sau depozitare.",
     longDescription:
@@ -43,12 +52,20 @@ export const productData = [
   {
   slug: "container-dublu",
   name: "Container Dublu",
-  price: "6500€ + TVA", 
+  price: "6500€ + TVA",
   size: "6m X 4,8m X 2,5m",
+  tagline: "Container dublu de vânzare – soluția ideală pentru o casă din containere sau birou spațios.",
+  keywords: [
+    "container dublu",
+    "casa din containere",
+    "container de vanzare",
+    "container modular",
+    "case modulare Romania",
+  ],
   description:
     "Container modular dublu, termoizolat, cu zonă principală spațioasă și grup sanitar complet echipat. Perfect pentru birouri, spații de lucru sau proiecte modulare.",
   longDescription:
-    "Containerul Dublu este soluția ideală pentru proiecte care necesită un spațiu interior generos și funcțional. Având dimensiunile de 6m x 4,8m, oferă aproape dublul suprafeței unui container standard și poate fi folosit ca birou, sală de ședințe, spațiu locuibil sau cameră tehnică. Structura este construită pe un cadru de oțel de 1.8–2mm grosime, extrem de rezistent la sarcini și condiții de lucru dificile. Panourile termoizolante de 40mm asigură eficiență energetică atât vara, cât și iarna.\n\nZona principală dispune de o ușă de intrare de 2200×900 mm și două geamuri de 500×500 pentru lumină naturală și ventilație. Containerul include și un grup sanitar complet separat (1,5m × 2m), echipat cu toaletă, chiuvetă și pisoar, având ușă proprie (2200×750 mm) și geam de baie 500×500. Instalația electrică este pregătită integral: tablou de siguranțe, prize, întrerupătoare și cinci lămpi LED eficiente. Acest container reprezintă o soluție modulară premium, ideală pentru șantiere, birouri temporare, spații comerciale sau proiecte rezidențiale modulare.",
+    "Containerul Dublu este soluția ideală pentru proiecte care necesită un spațiu interior generos și funcțional — inclusiv ca bază pentru o casă din containere completă. Având dimensiunile de 6m x 4,8m, oferă aproape dublul suprafeței unui container standard și poate fi folosit ca birou, sală de ședințe, spațiu locuibil sau cameră tehnică. Structura este construită pe un cadru de oțel de 1.8–2mm grosime, extrem de rezistent la sarcini și condiții de lucru dificile. Panourile termoizolante de 40mm asigură eficiență energetică atât vara, cât și iarna.\n\nZona principală dispune de o ușă de intrare de 2200×900 mm și două geamuri de 500×500 pentru lumină naturală și ventilație. Containerul include și un grup sanitar complet separat (1,5m × 2m), echipat cu toaletă, chiuvetă și pisoar, având ușă proprie (2200×750 mm) și geam de baie 500×500. Instalația electrică este pregătită integral: tablou de siguranțe, prize, întrerupătoare și cinci lămpi LED eficiente. Acest container reprezintă o soluție modulară premium, ideală pentru șantiere, birouri temporare, spații comerciale sau proiecte rezidențiale modulare.",
   images: {
     landscape: [
       {
@@ -87,10 +104,19 @@ export const productData = [
     name: "Container Sanitar",
     price: "1600€ + TVA",
     size: "2,4m X 2,4m X 2,5m",
+    tagline: "Container toaletă / WC de vânzare, modular și complet echipat.",
+    keywords: [
+      "container sanitar",
+      "container toaleta",
+      "container wc",
+      "toaleta ecologica container",
+      "container sanitar de vanzare",
+      "container santier",
+    ],
     description:
-      "Dotat cu WC, chiuvetă, o ușă și un geam mic. Perfect pentru șantiere sau zone fără utilități.",
+      "Container toaletă / WC modular, dotat cu WC, chiuvetă, o ușă și un geam mic. Perfect pentru șantiere sau zone fără utilități.",
     longDescription:
-      "Containerul Sanitar este gândit pentru utilizare în șantiere, zone industriale, evenimente sau locații fără infrastructură sanitară. Include toaletă, chiuvetă, instalații de apă, ventilație și finisaje ușor de igienizat. Structura este termoizolată și realizată din materiale rezistente, iar configurația compactă îl face simplu de instalat oriunde. Este ideal pentru echipe mobile, puncte de lucru temporare și proiecte care necesită facilități sanitare rapide și eficiente.",
+      "Containerul Sanitar – cunoscut și ca și container toaletă sau container WC – este gândit pentru utilizare în șantiere, zone industriale, evenimente sau locații fără infrastructură sanitară. Include toaletă, chiuvetă, instalații de apă, ventilație și finisaje ușor de igienizat. Structura este termoizolată și realizată din materiale rezistente, iar configurația compactă îl face simplu de instalat oriunde. Este ideal pentru echipe mobile, puncte de lucru temporare și proiecte care necesită facilități sanitare rapide și eficiente.",
     images: {
       landscape: [
         {

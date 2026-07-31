@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title: "Cum Alegi Containerul Potrivit? Diferențe între Standard, Dublu și Sanitar",
   description:
@@ -9,17 +12,30 @@ export const metadata = {
     "cum aleg containerul",
     "containere modulare Romania",
   ],
+  alternates: {
+    canonical: "/articole/container-potrivit",
+  },
   openGraph: {
     title: "Cum Alegi Containerul Potrivit? Diferențe între Standard, Dublu și Sanitar",
     description:
       "Află ce tip de container modular ți se potrivește: standard, dublu sau sanitar. Ghid complet pentru proiectele tale.",
     type: "article",
+    url: "/articole/container-potrivit",
   },
 };
 
 export default function ArticleAlegereContainer() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Cum Alegi Containerul Potrivit?", url: "/articole/container-potrivit" },
+  ]);
+
   return (
     <main className="pt-32 pb-20 max-w-4xl mx-auto px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
         Cum Alegi Containerul Potrivit? Diferențe între Standard, Dublu și Sanitar
       </h1>
@@ -30,17 +46,28 @@ export default function ArticleAlegereContainer() {
 
       <h2 className="text-3xl font-semibold mb-4 text-(--color-primary)">1. Containerul Standard</h2>
       <p className="mb-6">
-        Acesta este cel mai popular tip de container modular și reprezintă baza majorității proiectelor. Cu dimensiuni uzuale de 6m x 2,4m x 2,5m, containerul standard oferă un spațiu excelent pentru birouri, dormitoare, cabine de pază, depozitări sau mici spații comerciale. Structura sa rigidă și termoizolația asigură confort și durabilitate pe tot parcursul anului.
+        Acesta este cel mai popular tip de{" "}
+        <Link href="/produse/container-standard" className="text-(--color-accent) underline">
+          container standard
+        </Link>{" "}
+        și reprezintă baza majorității proiectelor. Cu dimensiuni uzuale de 6m x 2,4m x 2,5m, containerul standard oferă un spațiu excelent pentru birouri, dormitoare, cabine de pază, depozitări sau mici spații comerciale. Structura sa rigidă și termoizolația asigură confort și durabilitate pe tot parcursul anului.
       </p>
 
       <h2 className="text-3xl font-semibold mb-4 text-(--color-primary)">2. Containerul Dublu</h2>
       <p className="mb-6">
-        Containerul dublu este alegerea perfectă pentru cei care au nevoie de mai mult spațiu fără a sacrifica mobilitatea. Cu o lățime aproape dublă față de modelul standard, el oferă un interior generos, potrivit pentru camere mari, spații comerciale, birouri de echipă sau chiar locuințe modulare. De multe ori include și grup sanitar, ceea ce îl face complet funcțional.
+        <Link href="/produse/container-dublu" className="text-(--color-accent) underline">
+          Containerul dublu
+        </Link>{" "}
+        este alegerea perfectă pentru cei care au nevoie de mai mult spațiu fără a sacrifica mobilitatea. Cu o lățime aproape dublă față de modelul standard, el oferă un interior generos, potrivit pentru camere mari, spații comerciale, birouri de echipă sau chiar locuințe modulare. De multe ori include și grup sanitar, ceea ce îl face complet funcțional.
       </p>
 
       <h2 className="text-3xl font-semibold mb-4 text-(--color-primary)">3. Containerul Sanitar</h2>
       <p className="mb-6">
-        Conceput special pentru a oferi utilități, containerul sanitar este dotat cu WC, chiuvetă, instalații sanitare și uneori duș. Este indispensabil pe șantiere, evenimente, zone fără utilități sau proiecte temporare. Poate fi amplasat lângă containere standard sau duble pentru a completa un proiect modular complex.
+        Conceput special pentru a oferi utilități,{" "}
+        <Link href="/produse/container-sanitar" className="text-(--color-accent) underline">
+          containerul sanitar
+        </Link>{" "}
+        — cunoscut și ca și container toaletă sau container WC — este dotat cu WC, chiuvetă, instalații sanitare și uneori duș. Este indispensabil pe șantiere, evenimente, zone fără utilități sau proiecte temporare. Poate fi amplasat lângă containere standard sau duble pentru a completa un proiect modular complex.
       </p>
 
       <h2 className="text-3xl font-semibold mb-4 text-(--color-primary)">Cum alegi containerul potrivit?</h2>

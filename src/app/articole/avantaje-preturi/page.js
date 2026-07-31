@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title: "Case din Containere: Avantaje, Prețuri și Modele Populare în România | SmartContainer",
   description:
@@ -10,12 +13,15 @@ export const metadata = {
     "case modulare romania",
     "containere de locuit"
   ],
+  alternates: {
+    canonical: "/articole/avantaje-preturi",
+  },
   openGraph: {
     title: "Case din Containere: Avantaje, Prețuri și Modele Populare în România",
     description:
       "Ghid complet despre casele din containere: avantaje, prețuri, modele și tot ce trebuie să știi înainte să cumperi.",
     type: "article",
-    url: "https://smartcontainer.ro/articole/case-din-containere",
+    url: "/articole/avantaje-preturi",
     images: [
       "/og/case-din-containere.webp"
     ]
@@ -23,8 +29,17 @@ export const metadata = {
 };
 
 export default function CaseDinContainerePage() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Case din Containere", url: "/articole/avantaje-preturi" },
+  ]);
+
   return (
     <main className="pt-32 pb-20 px-4 max-w-4xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
         Case din Containere: Avantaje, Prețuri și Modele Populare în România
       </h1>
@@ -73,15 +88,25 @@ export default function CaseDinContainerePage() {
       </p>
       <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-6">
         <li>
-          <strong>Containere locuibile standard (6m × 2.4m)</strong>: de la
-          2500€ + TVA
+          <strong>
+            <Link href="/produse/container-standard" className="text-(--color-primary) underline">
+              Containere locuibile standard
+            </Link>{" "}
+            (6m × 2.4m)
+          </strong>
+          : de la 2500€ + TVA
         </li>
         <li>
           <strong>Module unite orizontal</strong>: de la 5000€ – 8000€ în funcție
           de echipare
         </li>
         <li>
-          <strong>Case container cu baie și bucătărie</strong>: 7000€ – 15.000€
+          <strong>
+            <Link href="/produse/container-dublu" className="text-(--color-primary) underline">
+              Case container cu baie și bucătărie
+            </Link>
+          </strong>
+          : 7000€ – 15.000€
         </li>
         <li>
           <strong>Case mari (3–6 module)</strong>: între 15.000€ și 35.000€
@@ -89,8 +114,15 @@ export default function CaseDinContainerePage() {
       </ul>
       <p className="text-gray-700 mb-8">
         Prețurile diferă în funcție de cerințele clientului. Pentru o ofertă
-        exactă, cel mai bine este să ne contactezi sau să consulți galeria pentru
-        modele reale construite de noi.
+        exactă, cel mai bine este să{" "}
+        <Link href="/contact" className="text-(--color-accent) underline">
+          ne contactezi
+        </Link>{" "}
+        sau să consulți{" "}
+        <Link href="/galerie" className="text-(--color-accent) underline">
+          galeria
+        </Link>{" "}
+        pentru modele reale construite de noi.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">
@@ -122,8 +154,15 @@ export default function CaseDinContainerePage() {
       <p className="text-gray-700 mb-6">
         Casele din containere reprezintă o alternativă accesibilă, rapidă și
         modernă la construcțiile clasice. Dacă îți dorești un proiect
-        personalizat, modular și adaptat nevoilor tale, nu ezita să ne contactezi
-        pentru o ofertă sau să vizitezi galeria pentru a vedea modele realizate.
+        personalizat, modular și adaptat nevoilor tale, nu ezita să{" "}
+        <Link href="/contact" className="text-(--color-accent) underline">
+          ne contactezi
+        </Link>{" "}
+        pentru o ofertă sau să vizitezi{" "}
+        <Link href="/galerie" className="text-(--color-accent) underline">
+          galeria
+        </Link>{" "}
+        pentru a vedea modele realizate.
       </p>
     </main>
   );

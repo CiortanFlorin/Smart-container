@@ -16,10 +16,14 @@ export const metadata = {
     "proiecte containere",
     "imagini containere",
   ],
+  alternates: {
+    canonical: "/galerie",
+  },
   openGraph: {
     title: "Galerie Containere Modulare – Modele și Proiecte Realizate",
     description:
       "Explorează galeria noastră cu containere modulare: modele standard, duble, sanitare și configurații speciale.",
+    url: "/galerie",
     images: [
       {
         url: "/products/landscape/standard-1.webp",

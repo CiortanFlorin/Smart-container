@@ -1,3 +1,5 @@
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title: "Container vs. Construcție Tradițională: De ce Tot Mai Mulți Români Aleg Varianta Modulară",
   description:
@@ -9,17 +11,30 @@ export const metadata = {
     "case din containere",
     "containere Romania"
   ],
+  alternates: {
+    canonical: "/articole/container-vs-traditional",
+  },
   openGraph: {
     title: "Container vs. Construcție Tradițională – Avantaje Module vs Clasic",
     description:
       "Analiză detaliată: costuri, timp de execuție, flexibilitate și impactul alegerii între container modular și construcție tradițională.",
     type: "article",
+    url: "/articole/container-vs-traditional",
   },
 };
 
 export default function ContainerVsTraditional() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Container vs. Construcție Tradițională", url: "/articole/container-vs-traditional" },
+  ]);
+
   return (
     <main className="pt-32 pb-20 px-4 max-w-4xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
         Container vs. Construcție Tradițională: De ce Tot Mai Mulți Români Aleg Varianta Modulară
       </h1>
@@ -77,7 +92,15 @@ export default function ContainerVsTraditional() {
         Alegerea între container și construcția tradițională depinde de priorități: dacă ai nevoie de rapiditate,
         cost predictibil și flexibilitate, soluția modulară este probabil cea mai bună opțiune. Dacă însă cauți
         un design complex, finisaje luxoase sau ai cerințe urbanistice stricte, construcția tradițională poate fi
-        justificată. Pentru idei și exemple, vizitează galeria noastră și contactează-ne pentru consultanță.
+        justificată. Pentru idei și exemple, vizitează{" "}
+        <a href="/galerie" className="text-(--color-accent) underline">
+          galeria noastră
+        </a>{" "}
+        și{" "}
+        <a href="/contact" className="text-(--color-accent) underline">
+          contactează-ne
+        </a>{" "}
+        pentru consultanță.
       </p>
     </main>
   );

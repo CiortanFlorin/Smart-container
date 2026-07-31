@@ -1,3 +1,5 @@
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title: "Modularitatea Containerelor: Cum se Pot Uni Orizontal și Vertical pentru Spații Mai Mari",
   description:
@@ -10,18 +12,31 @@ export const metadata = {
     "extindere containere",
     "containere Romania",
   ],
+  alternates: {
+    canonical: "/articole/modularitatea-containerelor",
+  },
   openGraph: {
     title:
       "Modularitatea Containerelor: Cum se Pot Uni Orizontal și Vertical pentru Spații Mai Mari",
     description:
       "Cum unești containerele pentru a obține birouri, locuințe sau spații comerciale mai mari.",
     type: "article",
+    url: "/articole/modularitatea-containerelor",
   },
 };
 
 export default function ArticlePage() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Modularitatea Containerelor", url: "/articole/modularitatea-containerelor" },
+  ]);
+
   return (
     <main className="pt-32 pb-20 px-4 max-w-4xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
         Modularitatea Containerelor: Cum se Pot Uni Orizontal și Vertical pentru Spații Mai Mari
       </h1>
@@ -90,7 +105,11 @@ export default function ArticlePage() {
       </p>
 
       <p className="text-gray-600 italic">
-        Dacă vrei un proiect personalizat, solicită o ofertă folosind pagina de contact.
+        Dacă vrei un proiect personalizat, solicită o ofertă folosind{" "}
+        <a href="/contact" className="text-(--color-secondary) underline">
+          pagina de contact
+        </a>
+        .
       </p>
     </main>
   );

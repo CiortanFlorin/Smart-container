@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { breadcrumbJsonLd } from "@/app/lib/jsonld";
+
 export const metadata = {
   title: "Containere pentru Șantiere: Ce Tipuri Există și Cum Îți Optimizează Munca",
   description:
@@ -11,18 +14,31 @@ export const metadata = {
     "containere de depozitare",
     "containere Romania",
   ],
+  alternates: {
+    canonical: "/articole/containere-santier",
+  },
   openGraph: {
     title:
       "Containere pentru Șantiere: Ce Tipuri Există și Cum Îți Optimizează Munca",
     description:
       "Tipuri de containere pentru șantiere și cum ajută la organizarea, eficiența și confortul echipei.",
     type: "article",
+    url: "/articole/containere-santier",
   },
 };
 
 export default function ArticlePage() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Containere pentru Șantiere", url: "/articole/containere-santier" },
+  ]);
+
   return (
     <main className="pt-32 pb-20 px-4 max-w-4xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <h1 className="text-4xl font-bold mb-6 text-(--color-primary)">
         Containere pentru Șantiere: Ce Tipuri Există și Cum Îți Optimizează Munca
       </h1>
@@ -38,7 +54,11 @@ export default function ArticlePage() {
         1. Container Birou – Centrul de Coordonare al Șantierului
       </h2>
       <p className="text-gray-700 mb-4">
-        Containerul birou este primul element esențial pe orice șantier. Aici se țin ședințele,
+        Un{" "}
+        <Link href="/produse/container-standard" className="text-(--color-accent) underline">
+          container standard
+        </Link>{" "}
+        folosit ca birou este primul element esențial pe orice șantier. Aici se țin ședințele,
         se redactează documente, se monitorizează activitățile și se gestionează comunicarea dintre
         echipe. Acesta poate fi dotat cu aer condiționat, prize, panou electric, mobilier și sisteme
         de iluminat LED – totul pentru un spațiu de lucru eficient și confortabil.
@@ -65,9 +85,12 @@ export default function ArticlePage() {
         3. Container Sanitar – Igienă Asigurată pe Tot Parcursul Proiectului
       </h2>
       <p className="text-gray-700 mb-4">
-        Containerele sanitare sunt dotate cu WC, chiuvetă, cabina de duș, pisoar și ventilație,
-        asigurând condiții decente de igienă pe șantier. Ele sunt complet autonome și pot fi conectate
-        la rețeaua locală sau la rezervor extern.
+        <Link href="/produse/container-sanitar" className="text-(--color-accent) underline">
+          Containerele sanitare
+        </Link>{" "}
+        — cunoscute și ca și container toaletă sau container WC — sunt dotate cu
+        WC, chiuvetă, cabina de duș, pisoar și ventilație, asigurând condiții decente de igienă pe șantier.
+        Ele sunt complet autonome și pot fi conectate la rețeaua locală sau la rezervor extern.
       </p>
       <p className="text-gray-700 mb-6">
         Menținerea curățeniei și a igienei reduce riscul îmbolnăvirilor și crește productivitatea echipei.
@@ -119,8 +142,19 @@ export default function ArticlePage() {
         Indiferent de tipul proiectului, ele pot fi configurate în funcție de nevoile echipei și pot
         fi instalate rapid, oriunde în țară.
       </p>
+      <p className="text-gray-700 italic mb-4">
+        Dacă ai nevoie de containere pentru șantier, cere o ofertă personalizată folosind{" "}
+        <Link href="/contact" className="text-(--color-accent) underline">
+          pagina de contact
+        </Link>
+        .
+      </p>
       <p className="text-gray-700 italic">
-        Dacă ai nevoie de containere pentru șantier, cere o ofertă personalizată folosind pagina de contact.
+        Nu ești sigur ce tip de container ți se potrivește? Consultă și{" "}
+        <Link href="/articole/container-potrivit" className="text-(--color-accent) underline">
+          ghidul nostru pentru alegerea containerului potrivit
+        </Link>
+        .
       </p>
     </main>
   );

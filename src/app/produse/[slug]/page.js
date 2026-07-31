@@ -1,5 +1,6 @@
 import { productData } from "@/app/data/productData";
 import ProductPageTemplate from "@/app/template/ProductPageTemplate";
+import { productJsonLd, breadcrumbJsonLd } from "@/app/lib/jsonld";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -12,12 +13,12 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const firstImage = product.images?.[0];
+  const firstImage = product.images?.landscape?.[0];
 
    return {
     title: `${product.name} – Container modular de vanzare | SmartContainer`,
     description: `${product.name} (${product.size}) – container modular complet echipat de vanzare.`,
-    keywords: [
+    keywords: product.keywords ?? [
     "containere",
     "containere modulare",
     "containere de vanzare",
@@ -28,11 +29,15 @@ export async function generateMetadata({ params }) {
     "container modular",
     "containere România",
   ],
+    alternates: {
+      canonical: `/produse/${slug}`,
+    },
     openGraph: firstImage
       ? {
           title: `${product.name} – Container modular de vanzare | SmartContainer`,
           description: `${product.longDescription}`,
-          images: [{ url: firstImage }],
+          url: `/produse/${slug}`,
+          images: [{ url: firstImage.src, alt: firstImage.alt }],
         }
       : undefined,
   };
@@ -46,5 +51,25 @@ export default async function ProductPage({ params }) {
     return <div className="pt-32 text-center">Produsul nu a fost găsit.</div>;
   }
 
-  return <ProductPageTemplate product={product} />;
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Acasă", url: "/" },
+    { name: "Produse", url: "/#produse" },
+    { name: product.name, url: `/produse/${slug}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productJsonLd(product, slug)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <ProductPageTemplate product={product} />
+    </>
+  );
 }

@@ -30,15 +30,15 @@ export default function GalerieClient({ images }) {
         <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
           {images.map((img) => (
             <div
-              key={img}
-              className={`w-full overflow-hidden rounded-xl 
+              key={img.src}
+              className={`w-full overflow-hidden rounded-xl
                 ${!isMobile ? "cursor-pointer group" : "pointer-events-none"}
               `}
               onClick={!isMobile ? () => setSelected(img) : undefined}
             >
               <Image
-                src={img}
-                alt="Container"
+                src={img.src}
+                alt={img.alt}
                 width={400}
                 height={400}
                 className={`rounded-xl object-cover w-full mb-4
@@ -58,8 +58,8 @@ export default function GalerieClient({ images }) {
         >
           <div className="relative w-full max-w-4xl">
             <Image
-              src={selected}
-              alt="Preview"
+              src={selected.src}
+              alt={selected.alt}
               width={800}
               height={600}
               className="rounded-xl object-contain mx-auto"

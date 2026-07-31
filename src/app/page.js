@@ -3,6 +3,7 @@ import Link from "next/link";
 import FaqList from "./components/faqList";
 import { faqItems } from "./data/faqData";
 import ContactForm from "./components/contactForm";
+import { faqJsonLd } from "./lib/jsonld";
 
 export const metadata = {
   title: "Containere modulare – SmartContainer | Containere locuință, birou, șantier de vanzare",
@@ -19,11 +20,14 @@ export const metadata = {
     "container modular",
     "containere România",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Containere modulare – SmartContainer",
     description:
       "Containere modulare pentru orice proiect: locuințe, șantiere, birouri, spații tehnice. Transport în toată țara.",
-    url: "https://smartcontainer.ro",
+    url: "/",
     siteName: "SmartContainer",
     images: [
       {
@@ -73,9 +77,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
           {/* Text section */}
           <div className="max-w-xl text-center md:text-left mb-10 md:mb-0">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Containere modulare pentru orice nevoie
-            </h2>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Containere Modulare de Vânzare pentru Orice Nevoie
+            </h1>
             <p className="mb-8 text-lg">
               Construite pentru a rezista și configurate după nevoile tale,
               containerele noastre modulare oferă o soluție rapidă, flexibilă și
@@ -107,9 +111,9 @@ export default function HomePage() {
 
       {/* Produse Section */}
       <section id="produse" className="py-20 bg-gray-50 text-center">
-        <h3 className="text-3xl font-bold mb-12 text-(--color-primary)">
+        <h2 className="text-3xl font-bold mb-12 text-(--color-primary)">
           Produsele Noastre
-        </h3>
+        </h2>
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-4">
           {products.map((product) => (
             <Link key={product.title} href={product.link}>
@@ -137,21 +141,67 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Articole Section */}
+      <section id="articole" className="py-16 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-10 text-(--color-primary)">
+          Ghiduri și Resurse
+        </h2>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 px-4">
+          <Link
+            href="/articole/avantaje-preturi"
+            className="block bg-gray-50 hover:bg-gray-100 shadow-md rounded-xl p-6 text-left transition"
+          >
+            <h3 className="font-semibold text-lg text-(--color-primary) mb-2">
+              Casă din containere: prețuri și modele populare
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Avantaje, prețuri reale și cele mai căutate configurații de case din containere din România.
+            </p>
+          </Link>
+          <Link
+            href="/articole/container-potrivit"
+            className="block bg-gray-50 hover:bg-gray-100 shadow-md rounded-xl p-6 text-left transition"
+          >
+            <h3 className="font-semibold text-lg text-(--color-primary) mb-2">
+              Cum alegi containerul potrivit
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Diferențele dintre container standard, dublu și sanitar, explicate pe scurt.
+            </p>
+          </Link>
+          <Link
+            href="/articole/containere-santier"
+            className="block bg-gray-50 hover:bg-gray-100 shadow-md rounded-xl p-6 text-left transition"
+          >
+            <h3 className="font-semibold text-lg text-(--color-primary) mb-2">
+              Containere pentru șantier
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Tipurile de container șantier disponibile: birou, vestiar, sanitar și depozitare.
+            </p>
+          </Link>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-gray-100">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
+        />
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center mb-10 text-(--color-primary)">
+          <h2 className="text-3xl font-bold text-center mb-10 text-(--color-primary)">
             Întrebări Frecvente
-          </h3>
+          </h2>
           <FaqList items={faqItems} />
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-10 bg-white">
-        <h3 className="text-3xl font-bold mb-8 text-(--color-primary) mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-8 text-(--color-primary) mx-auto text-center">
           Contactează-ne
-        </h3>
+        </h2>
         <div className="max-w-3xl mx-auto">
           <ContactForm />
         </div>
