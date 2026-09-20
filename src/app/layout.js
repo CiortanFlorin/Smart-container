@@ -3,6 +3,8 @@ import { Inter, Poppins } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { organizationJsonLd } from "./lib/jsonld";
+import { Analytics } from '@vercel/analytics/next';
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
@@ -30,6 +32,7 @@ export default function RootLayout({ children }) {
         />
         <Navbar />
         {children}
+        <Analytics />
         <Footer></Footer>
       </body>
     </html>
