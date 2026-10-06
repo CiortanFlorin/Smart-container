@@ -79,10 +79,10 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-gray-700 text-lg md:text-2xl">
                     <a
-                      href="mailto:viorelciortan2@gmail.com"
+                      href="mailto:metal.lemn@yahoo.com"
                       className="hover:underline"
                     >
-                      viorelciortan2@gmail.com
+                      metal.lemn@yahoo.com
                     </a>
                   </p>
                 </div>
