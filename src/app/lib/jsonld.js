@@ -8,7 +8,7 @@ export function organizationJsonLd() {
     url: BASE,
     image: `${BASE}/foto-container.webp`,
     telephone: "+40751518502",
-    email: "viorelciortan2@gmail.com",
+    email: "metal.lemn@yahoo.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Calea Smardan nr. 2",
